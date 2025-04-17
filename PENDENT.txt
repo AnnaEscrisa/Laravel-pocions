@@ -1,0 +1,24 @@
+
+
+General
+/ message controller
+/ canviar todos los SESSION(user) i otros similares
+
+Home
+/ hidden button en rsidebar si no estas logat
+    <a id="ar_edit" class="button <?= $hiddenButton ?>">
+
+Login
+/ cookie 3 intents
+/ user Models
+/ cookie recorda'm
+/ social login
+/ captcha
+/ session timeout
+
+Recupera pass
+/ enviar mail amb boto
+/ si arribes amb boto fa una cosa, sino una altre
+
+API
+
