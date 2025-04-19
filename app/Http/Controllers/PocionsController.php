@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Models\Articles;
 
@@ -70,19 +71,19 @@ class PocionsController extends Controller
             ]);
         }
 
-            $article = new Articles();
-            $article->titol = $request->input('titol');
-            $article->cos = $request->input('cos');
-            $article->user_id = Auth()->user()->id;
-         
-            if ($article->save()) {
-                
-            }
+        $article = new Articles();
+        $article->titol = $request->input('titol');
+        $article->cos = $request->input('cos');
+        $article->user_id = Auth()->user()->id;
+
+        if ($article->save()) {
+
+        }
     }
 
     private function validateArticle(Request $request)
     {
-        return $request->validate([
+        return Validator::make($request->all(), [
             'titol' => 'required|string|max:40|unique:articles',
             'cos' => 'required|string|max:400',
             'image' => 'image|mimes:jpeg,png,jpg,webp|max:2048',
@@ -102,7 +103,7 @@ class PocionsController extends Controller
 
     public function formView(Request $request)
     {
-        return view('articles-form'); 
+        return view('articles-form');
     }
 
 

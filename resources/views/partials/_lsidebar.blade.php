@@ -54,7 +54,7 @@
         </svg>
         <li id="users" class="nav-item">Users</li>
       </a>
-    <?php endif; ?>
+    @endif
   
     <div class="aside_grup about_items">
       <a id="about" class="nav-link nav-item" href="about">
