@@ -1,0 +1,26 @@
+
+
+General
+/ message controller
+/ canviar todos los SESSION(user) i otros similares
+
+Login
+/ social login
+/ session timeout
+
+Crear usuari
+/ validation inputs
+
+Editar usuari
+/ valitation inputs
+
+Recupera pass
+/ enviar mail amb boto
+/ si arribes amb boto fa una cosa, sino una altre
+
+API
+
+Clonar
+/ que funcione el boton
+/ modal
+/ qr

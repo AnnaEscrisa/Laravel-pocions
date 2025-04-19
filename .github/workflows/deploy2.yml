@@ -1,0 +1,36 @@
+name: Deploy to DonDominio
+
+on:
+    push:
+        branches:
+            - main
+            - dev
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+            
+        - name: Deploy 🚀
+          uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+          with:
+            server: ftp.annaescribano.cat
+            username: ${{ github.ref_name == 'main' && secrets.FTP_USERNAME || secrets.FTP_USERNAME_DEV }}
+            password: ${{ github.ref_name == 'main' && secrets.FTP_PASSWORD || secrets.FTP_PASSWORD_DEV }}
+            # username: ${{ secrets.FTP_USERNAME }}
+            # password: ${{ secrets.FTP_PASSWORD }}
+            local-dir: ./
+            server-dir: ./
+            exclude:
+                .git/**
+                .github/** 
+                .gitignore
+                public/img/**
+                config.php
+                vendor/**
+                node_modules/**
+                .env
+                
