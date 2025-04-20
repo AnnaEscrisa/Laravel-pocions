@@ -11,6 +11,14 @@ class Articles extends Model
 
     public $timestamps = false;
 
+    protected $fillable = [
+        'titol',
+        'cos',
+        'imatge',
+        'ingredients',
+        'user_id',
+    ];
+
     public function scopeWithUserName($query)
     {
         return $query->join('users', 'articles.user_id', '=', 'users.id')

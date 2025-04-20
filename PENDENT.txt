@@ -2,19 +2,22 @@
 
 General
 / canviar todos los SESSION(user) i otros similares
+/ que passa amb els checkboxes???
 
 Article
 / Crear
     / validacions ✅
     / valors anteriors ✅
     / inserir ✅
+    / images
 / Editar
-    / validacions
-    / permisos
-    / valors anteriors
+    / validacions ✅
+    / permisos ✅
+    / valors anteriors ✅
+    / images
 / eliminar
     / permisos
-    / modal
+    / modal ✅
 
 Login
 / normal login ✅
@@ -34,8 +37,6 @@ API
 / pagina de la key (front)
 
 Clonar
-/ que funcione el boton
-/ modal
 / qr
 / treure el boto del sidebar de ingredients de creaci article
 

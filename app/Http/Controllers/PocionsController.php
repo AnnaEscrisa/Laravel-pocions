@@ -154,7 +154,7 @@ class PocionsController extends Controller
     private function validateArticle(Request $request, $articleId = null)
     {
         return Validator::make($request->all(), [
-            'titol' => 'required|string|max:40|unique:articles',
+            'titol' => ['required','string','max:40',Rule::unique('articles')->ignore($articleId)],
             'cos' => 'required|string|max:400',
             'image' => 'image|mimes:jpeg,png,jpg,webp|max:2048',
         ], [

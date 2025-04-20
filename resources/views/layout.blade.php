@@ -11,13 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script defer src="js/nav-selected.js"></script>
-    <script src="js/alertes.js"></script>
-    <script src="js/right-sidebar.js"></script>
-    <script defer src="js/qr.js"></script>
-    <script defer src="js/search-size.js"></script>
-    <script defer src="js/accessible.js"></script>
-    <link type="text/css" rel="stylesheet" href="css/app.css">
+    <script defer src="{{ asset('js/nav-selected.js')}}"></script>
+    <script src="{{ asset('js/alertes.js')}}"></script>
+    <script src="{{ asset('js/right-sidebar.js')}}"></script>
+    <script defer src="{{ asset('js/qr.js')}}"></script>
+    <script defer src="{{ asset('js/search-size.js')}}"></script>
+    <script defer src="{{ asset('js/accessible.js')}}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css')}}">
 </head>
 <body>
    @include('partials._message')

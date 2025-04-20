@@ -64,7 +64,7 @@
         <div class="grid_card">
             <article class="article_card" tabindex="0" aria-labelledby="article{{ $counter }}" role="button"
                 onclick="showSidebar({{ json_encode($pocio) }}, 'article')">
-                <img src="img/articles/{{ $pocio->image }}"
+                <img src="{{ asset('img/articles/'. $pocio->image)}}"
                     alt="{{ $pocio->image == 'none.webp' ? 'Imatge no disponible' : 'Imatge de poció ' . $pocio->titol }}">
 
                 <div class="ac_banner">
@@ -93,9 +93,7 @@
         {{ $pocions->links() }}
         @endif
     </section>
-    {{-- 
-    include "view/partials/_modal-delete.vista.php";
-    include "view/partials/_modal-clone.vista.php";
-    --}}
+    @include("partials._modal-delete")
+    @include("partials._modal-clone")
 </main>
 @endsection
