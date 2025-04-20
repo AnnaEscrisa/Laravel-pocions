@@ -1,15 +1,25 @@
 
 
 General
-/ message controller
 / canviar todos los SESSION(user) i otros similares
 
+Article
+/ Crear
+    / validacions ✅
+    / valors anteriors ✅
+    / inserir ✅
+/ Editar
+    / validacions
+    / permisos
+    / valors anteriors
+/ eliminar
+    / permisos
+    / modal
+
 Login
+/ normal login ✅
 / social login
 / session timeout
-
-Crear usuari
-/ validation inputs
 
 Editar usuari
 / valitation inputs
@@ -19,8 +29,17 @@ Recupera pass
 / si arribes amb boto fa una cosa, sino una altre
 
 API
+/ endpoints
+/ guard?
+/ pagina de la key (front)
 
 Clonar
 / que funcione el boton
 / modal
 / qr
+/ treure el boto del sidebar de ingredients de creaci article
+
+
+Registre 
+/ validation inputs ✅
+/ valors anteriors ✅

@@ -1,4 +1,5 @@
 @extends('layout')
+
 @section('content')
 <main class="home_main">
     <section class="hm_menu">
@@ -56,3 +57,5 @@
         </button>
     </form>
 </main>
+
+@endsection

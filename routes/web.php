@@ -6,14 +6,25 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PocionsController;
 use Illuminate\Support\Facades\Route;
 
-//home
+//Pocions
 Route::controller(PocionsController::class)->group(function() {
     Route::match(['get', 'post'], '/', 'index')->name('home');
     Route::match(['get', 'post'], '/My-Articles', 'privades')->name('mine')->middleware('auth');
-    Route::match(['get', 'post'], '/nou-article', 'insert')->name('insertar')->middleware('auth');
-    Route::match(['get', 'post'], '/editar-article/{id}', 'update')->name('editar')->middleware('auth');
-    Route::match(['get', 'post'], '/eliminar-article/{id}', 'delete')->name('eliminar')->middleware('auth');
-    Route::match(['get', 'post'], '/clonar-article/{id}', 'clone')->name('clonar')->middleware('auth');
+    
+    Route::prefix('/nou_article')->group(function() {
+        Route::get('', 'formView')->name('insertar')->middleware('auth');
+        Route::post('', 'insert')->name('insertar.post')->middleware('auth');
+    });
+    Route::prefix('/editar_article')->group(function() {
+        Route::get('/{id}', 'formView')->name('editar')->middleware('auth');
+        Route::post('/{id}', 'edit')->name('editar.post')->middleware('auth');
+    });
+    Route::prefix('/clonar_article')->group(function() {
+        Route::get('/{id}', 'cloneView')->name('clonar')->middleware('auth');
+        Route::post('/{id}', 'clone')->name('clonar.post')->middleware('auth');
+    });
+   
+    Route::get('/eliminar_article/{id}', 'delete')->name('eliminar')->middleware('auth');
 });
 
 //login

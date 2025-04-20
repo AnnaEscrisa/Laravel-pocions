@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <button class="button button-lil">Login</button>
-                <p> No tens compte d'usuari? <a href="registre">Registra't</a> </p>
+                <p> No tens compte d'usuari? <a href="register">Registra't</a> </p>
             </div>
         </section>
 

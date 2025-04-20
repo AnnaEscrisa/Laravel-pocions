@@ -9,7 +9,7 @@
     <!--elements -->
     <div class="navbar" id="navbarNav">
       <!-- logo -->
-      <a href="home">
+      <a href="/">
         <img src="img/gui/logo.png" alt="" class="navbar_logo">
       </a>
   

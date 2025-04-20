@@ -25,8 +25,8 @@ class RegisterController extends Controller {
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'is_Social' => 0,
-            'is_Admin' => 0
+            'isSocial' => 0,
+            'isAdmin' => 0
         ]);
 
         return redirect()->route('home')->with('message', [

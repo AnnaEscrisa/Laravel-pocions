@@ -33,8 +33,8 @@ class LoginController extends Controller
             $request->session()->put('user', [
                 'id' => $user->id,
                 'name' => $user->name,
-                'is_Admin' => $user->is_Admin,
-                'is_Social' => $user->is_Social,
+                'isAdmin' => $user->isAdmin,
+                'isSocial' => $user->isSocial,
             ]);
 
             return redirect()->route('mine')->with('message', [

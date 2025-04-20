@@ -49,11 +49,11 @@ function sidebarArticle(article) {
     $("#ar_description").html(article.cos);
     $('.ar_user').html(article.user_name);
 
-    $("#ar_edit").attr('href', `articles_form?isEdit=true&id=${article.id}`);
+    $("#ar_edit").attr('href', `editar_article/${article.id}`);
     document.getElementById("ar_delete").addEventListener(
         "click",
         function () {
-            openDeleteModal(`articles_form?isDelete=true&id=${article.id}`, 'article')
+            openDeleteModal(`eliminar_article/${article.id}`, 'article')
         });
 
     document.getElementById("ar_clone").addEventListener(

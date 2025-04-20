@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Gate;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -44,6 +45,10 @@ class AppServiceProvider extends ServiceProvider
             $ruta = $titles[$routeName] ?? ucfirst(str_replace('-', ' ', basename($routeName)));
     
             $view->with('Ruta', $ruta);
+        });
+
+        Gate::define('admin', function ($user) {
+            return $user->isAdmin; 
         });
     }
 }
