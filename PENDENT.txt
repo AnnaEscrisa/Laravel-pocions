@@ -16,7 +16,7 @@ Article
     / valors anteriors ✅
     / images
 / eliminar
-    / permisos
+    / permisos 
     / modal ✅
 
 Login

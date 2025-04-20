@@ -145,7 +145,7 @@ class PocionsController extends Controller
             ]);
         } else {
             return redirect()->route('home')->with('message', [
-                'text' => config('message.error_a3'),
+                'text' => config('message.error_a4'),
                 'type' => 'error'
             ]);
         }
