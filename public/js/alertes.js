@@ -15,11 +15,11 @@ function openCloneModal(id) {
   document.getElementById('modal-article-id').value = id;
   const formData = new FormData(document.getElementById('codeForm'));
   $.ajax({
-    url: 'qr?article=true',
+    url: 'qr/generar',
     type: 'POST',
     data: Object.fromEntries(formData),
     success: function (response) {
-      $("#modal-qr").html(response);
+      $("#modal-qr").html(response.html);
     },
   });
 

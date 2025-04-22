@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+    'github' => [
+        'client_id' => env('GITHUB_ID'),
+        'client_secret' => env('GITHUB_SECRET'),
+        'redirect' => env('GITHUB_CALLBACK'),
+    ],
+
+    'deviantart' => [
+        'client_id' => env('DEVIANTART_ID'),
+        'client_secret' => env('DEVIANTART_SECRET'),
+        'redirect' => env('DEVIANTART_CALLBACK'),
+    ],
+
 ];

@@ -9,6 +9,11 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
-
+    
+    
+    
+    public function profile(){
+        return view('profile');
+    }
 
 }

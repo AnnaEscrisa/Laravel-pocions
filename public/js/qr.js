@@ -8,12 +8,12 @@ function changeArticleQr() {
    
     const formData = new FormData(document.getElementById('codeForm'));
     $.ajax({
-        url: 'qr?article=true',
+        url: 'qr/generar',
         type: 'POST',
         data: Object.fromEntries(formData),
         success: function (response) {
             console.log(response)
-            $("#modal-qr").html(response);
+            $("#modal-qr").html(response.html);
         },
     });
 }

@@ -1,5 +1,3 @@
-
-
 General
 / canviar todos los SESSION(user) i otros similares
 / que passa amb els checkboxes???
@@ -22,14 +20,21 @@ Article
 Login
 / normal login ✅
 / social login
+    / github
+        / existent ✅
+        / nou
+    / deviantart
+        / existent
 / session timeout
 
-Editar usuari
-/ valitation inputs
+Registre 
+/ validation inputs ✅
+/ valors anteriors ✅
 
 Recupera pass
-/ enviar mail amb boto
-/ si arribes amb boto fa una cosa, sino una altre
+/ enviar mail amb boto ✅
+/ si ets social user no ✅
+/ si arribes amb boto fa una cosa, si arribes per canvi pass una altre ✅
 
 API
 / endpoints
@@ -37,10 +42,7 @@ API
 / pagina de la key (front)
 
 Clonar
-/ qr
-/ treure el boto del sidebar de ingredients de creaci article
+/ qr ✅
+/ treure el boto del sidebar de ingredients de creaci article 
 
 
-Registre 
-/ validation inputs ✅
-/ valors anteriors ✅

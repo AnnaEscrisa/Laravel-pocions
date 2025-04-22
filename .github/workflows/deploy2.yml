@@ -3,7 +3,7 @@ name: Deploy to DonDominio
 on:
     push:
         branches:
-            - main
+            - master
             - dev
 
 jobs:

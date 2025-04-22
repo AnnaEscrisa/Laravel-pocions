@@ -84,7 +84,7 @@
       <li id="contacte" class="nav-item">Contacte</li>
     </a>
   
-    <a class="nav-link" href="qr">
+    <a class="nav-link" href="qr/lector">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path
           d="M4 4H10V10H4V4ZM14 14H20V20H14V14ZM14 4H20V10H14V4ZM10 14H10.01V14.01H10V14ZM10 18H10.01V18.01H10V18ZM7 20H7.01V20.01H7V20ZM7 16H7.01V16.01H7V16ZM4 18H4.01V18.01H4V18ZM4 14H4.01V14.01H4V14Z"

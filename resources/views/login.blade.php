@@ -25,7 +25,7 @@
                 @if (Cookie::get('intentsLogin') && Cookie::get('intentsLogin') >= 3)
                 <div class='g-recaptcha' data-sitekey="{{ env('CAPTCHA_KEY') }}"></div>
                 @endif
-                <p> <a href="recuperacio">Has oblidat la contrasenya? </a> </p>
+                <p><a href="reset">Has oblidat la contrasenya? </a> </p>
             </div>
             <div class="form-group">
                 <button class="button button-lil">Login</button>
@@ -34,8 +34,8 @@
         </section>
 
         <section class="form_social">
-            <a class="button button-lil" role="button" href="login?github=true">Iniciar sessio amb GitHub</a>
-            <a class="button button-lil" role="button" href="login?deviantart=true">Iniciar sessio amb
+            <a class="button button-lil" role="button" href="auth/github">Iniciar sessio amb GitHub</a>
+            <a class="button button-lil" role="button" href="auth/deviantart">Iniciar sessio amb
                 DeviantArt</a>
         </section>
     </form>

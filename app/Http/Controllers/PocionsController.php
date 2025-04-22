@@ -120,17 +120,34 @@ class PocionsController extends Controller
         }
     }
 
-    public function clone($id)
+    public function clone(Request $request)
     {
-        $article = $this->checkExistance($id);
+        $validator = $this->validateArticle($request);
 
-        $newArticle = $article->replicate();
-        $newArticle->save();
-        return redirect()->route('home')->with('message', [
-            'text' => config('message.success_a1'),
-            'type' => 'success'
-        ]);
+        if ($validator->fails()) {
+            return back()->withInput()->with('message', [
+                'text' => $validator->errors()->first(),
+                'type' => 'error'
+            ]);
+        }
+       
+        $article = new Articles();
+        $article->titol = $request->input('titol');
+        $article->cos = $request->input('cos');
+        $article->user_id = Auth()->user()->id;
 
+        if ($article->save()) {
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $filename = $article->id . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path('img/articles/'), $filename);
+                $article->update(['image' => $filename]);
+            }
+            return redirect()->route('home')->with('message', [
+                'text' => config('message.success_a1'),
+                'type' => 'success'
+            ]);
+        }
     }
 
     public function delete($id)
@@ -193,6 +210,14 @@ class PocionsController extends Controller
     {
         if ($articleId && $clone) {
             $article = $this->checkExistance($articleId);
+
+            $dadesBuides = ['titol', 'descripcio', 'ingredients', 'imatge'];
+
+            foreach ($dadesBuides as $dada) {
+                if ($request->query($dada) === 'false') {
+                    $article->$dada = ''; 
+                }
+            }
 
         } elseif ($articleId) {
             $article = $this->checkExistance($articleId);

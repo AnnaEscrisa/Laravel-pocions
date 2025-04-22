@@ -7,6 +7,7 @@
             </div>
             <div class="modal-body hstack">
                 <form action="" id="codeForm">
+                    @csrf
                     <input type="text" name="id" id="modal-article-id" hidden>
                     <label class="form-label checkbox">
                         <input type="checkbox" name="titol" id="" value="checkedValue" checked>
