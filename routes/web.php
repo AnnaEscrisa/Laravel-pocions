@@ -55,6 +55,7 @@ Route::controller(UsersController::class)->group(function () {
         Route::get('/{id}', 'profile')->name('profile')->middleware('auth');
         Route::get('/edit/{id}', 'editView')->name('profile.edit')->middleware('auth');
         Route::post('/edit/{id?}', 'update')->name('profile.edit.post')->middleware('auth');
+        Route::get('/delete/{id}', 'delete')->name('profile.delete')->middleware('auth');
     });
 });
 

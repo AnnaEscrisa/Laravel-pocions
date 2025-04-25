@@ -1,7 +1,10 @@
-# Instal·lacio
+Projecte desenvolupat amb Laravel, disponible a:
+http://laravel-dev.annaescribano.cat/
+
+# Instal·lació
 
 - Descarregat de Github
-Crear un arxiu .env amb les dades necessàries, principalment la base de dades. 
+Crear un arxiu .env amb les dades necessàries des de .env.example, principalment la base de dades. 
 Instal·lar/actualitzar les dependències de composer (composer install).
 Còrrer les migracions per la base de dades (php artisan migrate).
 Canviar el nom a l'arxiu Request.php.example a Request.php. 

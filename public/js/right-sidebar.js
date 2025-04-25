@@ -73,7 +73,7 @@ function sidebarUser(user) {
     document.getElementById("ar_delete").addEventListener(
         "click",
         function () {
-            openDeleteModal(`profile?isDelete=true&id=${user.id}`, 'usuari')
+            openDeleteModal(`profile/delete/${user.id}`, 'usuari')
         });
 }
 

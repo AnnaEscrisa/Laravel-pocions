@@ -77,8 +77,25 @@ class UsersController extends Controller
         ]);
     }
 
+    public function delete($id)
+    {
+        $user = User::find($id);
+        if ($user->id != auth()->user()->id && !auth()->user()->isAdmin) {
+            abort(403);
+        }
+        if (!$user) {
+            return redirect()->route('home')->with('error', 'Usuari no trobat');
+        }
 
-    public function setHomeCookies(Request $request)
+        $user->delete();
+
+        return redirect()->route('home')->with('message', [
+            'text' => config('message.success_r3'),
+            'type' => 'success'
+        ]);
+    }
+
+    private function setHomeCookies(Request $request)
     {
         $max_users = $request['selectPagines'] ?? Cookie::get('paginacioUsers') ?? 6;
         $ordenacio_users = $request['selectOrder'] ?? Cookie::get('order_users') ?? 'id';
