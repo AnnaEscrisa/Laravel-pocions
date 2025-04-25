@@ -57,9 +57,6 @@ class RegisterController extends Controller {
             'email.email' => config('message.error_r4'),
         ]);
 
-        //if user name is not unique, return error message
-
-     
     }
 
     public function index() {
