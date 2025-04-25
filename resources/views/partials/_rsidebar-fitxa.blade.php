@@ -12,6 +12,7 @@
     <div class="ar_body">
 
         @if(Route::is('admin.all'))
+        @if(Route::is('admin.all'))
         <p class="ar_email"></p>
         <p id="ar_nom"></p>
         @elseif ($Ruta == 'materials')
@@ -24,6 +25,7 @@
 
     </div>
 
+    @if(!Route::is('materials'))
     @if(!Route::is('materials'))
     <div class="ar_footer">
 
