@@ -12,7 +12,6 @@
     <div class="ar_body">
 
         @if(Route::is('admin.all'))
-        @if(Route::is('admin.all'))
         <p class="ar_email"></p>
         <p id="ar_nom"></p>
         @elseif ($Ruta == 'materials')
@@ -26,9 +25,7 @@
     </div>
 
     @if(!Route::is('materials'))
-    @if(!Route::is('materials'))
     <div class="ar_footer">
-
         <a id="ar_edit" class="button {{ Route::is('admin.all') || Route::is('mine') ? '' : 'hidden' }}">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
                 <path
