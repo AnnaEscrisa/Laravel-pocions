@@ -38,7 +38,7 @@
         </div>
 
         <div class="grid_aside_right">
-            @if (str_contains(strtolower($Ruta), 'articles_form'))
+            @if (str_contains(strtolower($Ruta), 'article'))
                 @include('partials._rsidebar-opcions')
             @else
                 @include('partials._rsidebar-fitxa')

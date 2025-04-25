@@ -4,33 +4,27 @@ Article
     / validacions ✅
     / valors anteriors ✅
     / inserir ✅
-    / images
 / Editar
     / validacions ✅
     / permisos ✅
     / valors anteriors ✅
 / eliminar
-    / permisos 
+    / permisos ✅
     / modal ✅
 
 Login
 / normal login ✅
 / social login
-    / github
-        / existent ✅
-        / nou
-    / deviantart
-        / existent
-/ session timeout
+    / github ✅
 
 Captcha
-/ fer nou key
+/ fer nou key ✅
 
 admin
 /veure tots usuaris ✅
 /canviar usuaris / falta controller (que profile pueda admitir un id y asi mostrar el especifico), permisos admin
-                     + reruta modal
-/delete ususari / falta rerutear el modal
+                     + reruta modal ✅
+/delete ususari / falta rerutear el modal ✅
 
 Registre 
 / validation inputs ✅
@@ -47,6 +41,6 @@ API
 
 Clonar
 / qr ✅
-/ treure el boto del sidebar de ingredients de creaci article 
+/lector ✅
 
 
