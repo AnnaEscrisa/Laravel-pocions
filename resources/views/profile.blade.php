@@ -3,7 +3,7 @@
 <main>
     <form action="" class="form_section form_section_h">
         <section class="form_main">
-            @foreach (array_filter(Auth::user()->toArray(), function ($value, $key) {
+            @foreach (array_filter($user->toArray(), function ($value, $key) {
             return $key !== 'id' && $key !== 'password' && $key !== 'isAdmin';
             }, ARRAY_FILTER_USE_BOTH) as $key => $value)
             <div class="form-group">
@@ -12,11 +12,11 @@
                     value="{{ $key == 'isSocial' ? ($value == 1 ? 'Sí' : 'No') : $value }}">
             </div>
             @endforeach
-            <a class="button" href="profile/edit">Editar dades</a>
+            <a class="button" href="edit/{{$user->id}}">Editar dades</a>
         </section>
         <img src="{{ asset('img/users/none.webp')}}" alt="">
     </form>
-    @if( !Auth::user()->isSocial)
+    @if( !$user->isSocial)
     <section class="form_section">
         <a class="button" href="new_pass">Canviar contrasenya</a>
     </section>

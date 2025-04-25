@@ -52,9 +52,9 @@ Route::controller(RegisterController::class)->group(function () {
 //perfil
 Route::controller(UsersController::class)->group(function () {
     Route::prefix('/profile')->group(function () {
-        Route::get('/edit', 'edit')->name('profile.edit')->middleware('auth');
-        Route::post('/edit', 'update')->name('profile.edit.post')->middleware('auth');
-        Route::get('', 'profile')->name('profile');
+        Route::get('/{id}', 'profile')->name('profile')->middleware('auth');
+        Route::get('/edit/{id}', 'editView')->name('profile.edit')->middleware('auth');
+        Route::post('/edit/{id?}', 'update')->name('profile.edit.post')->middleware('auth');
     });
 });
 
@@ -76,24 +76,9 @@ Route::controller(QRController::class)->group(function () {
 });
 
 //admin
-
-
-
-//api
-
-
-//contacte 
-
-
-// materials
-
-
-
-
-// recuperar contrasenya
-
-
-
-//Per resource
-Route::resource('/api', ApiController::class);
-Route::apiResource('/api', ApiController::class);
+Route::controller(UsersController::class)->group(function () {
+    Route::prefix('/admin')->group(function () {
+        Route::get('', 'index')->name('admin.all')->middleware('auth');
+        
+    });
+});

@@ -15,7 +15,6 @@ class PocionsController extends Controller
     {
         $opcions = $this->setHomeCookies($request);
         $articleName = $request['buscadorArticle'] ?? null;
-        ;
 
         $possiblePocio = Articles::where('titol', $articleName)->first();
         $pocions = $possiblePocio ?? Articles::withUserName()

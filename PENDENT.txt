@@ -1,6 +1,3 @@
-General
-/ canviar todos los SESSION(user) i otros similares
-/ que passa amb els checkboxes???
 
 Article
 / Crear
@@ -12,7 +9,6 @@ Article
     / validacions ✅
     / permisos ✅
     / valors anteriors ✅
-    / images
 / eliminar
     / permisos 
     / modal ✅
@@ -27,6 +23,15 @@ Login
         / existent
 / session timeout
 
+Captcha
+/ fer nou key
+
+admin
+/veure tots usuaris ✅
+/canviar usuaris / falta controller (que profile pueda admitir un id y asi mostrar el especifico), permisos admin
+                     + reruta modal
+/delete ususari / falta rerutear el modal
+
 Registre 
 / validation inputs ✅
 / valors anteriors ✅
@@ -37,9 +42,8 @@ Recupera pass
 / si arribes amb boto fa una cosa, si arribes per canvi pass una altre ✅
 
 API
-/ endpoints
-/ guard?
-/ pagina de la key (front)
+/ endpoints✅
+/ guard✅
 
 Clonar
 / qr ✅

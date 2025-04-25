@@ -69,7 +69,7 @@ function sidebarUser(user) {
     $(".ar_email").html(user.email);
     $("#ar_nom").html(user.name);
 
-    document.getElementById("ar_edit").href = `profile?isEdit=true&id=${user.id}`;
+    document.getElementById("ar_edit").href = `profile/${user.id}`;
     document.getElementById("ar_delete").addEventListener(
         "click",
         function () {
